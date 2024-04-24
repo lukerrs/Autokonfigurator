@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app version="3.1">
+	<servlet>
+		<servlet-name>UpdateCar</servlet-name>
+		<servlet-class>
+			Autokonfigurator.UpdateCar
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateCar</servlet-name>
+		<url-pattern>/UpdateCar</url-pattern>
+	</servlet-mapping>
+</web-app>

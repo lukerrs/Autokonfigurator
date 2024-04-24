@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+	h1
+	{
+		text-align: center;
+	}
+	body
+	{
+		background-color: rgb(50, 50, 50);
+		color: WhiteSmoke;
+	}
+	form
+	{
+		margin: 0;
+		color: white;
+		position: absolute;
+		width: 100%;
+		top: 100%;
+		left: 50%;
+		transform: translate( -50%, -100%);
+		border: 3px solid rgb(75, 75, 75);
+  	}
+  	table
+  	{
+		border-collapse: collapse;
+		width: 100%;
+		border: 2px solid white;
+	}
+	th, td
+	{
+		text-align: left;
+		padding: 16px;
+	}
+	.center 
+	{
+		display: block;
+		margin: auto;
+		width: 75%;
+		height: 75%;
+	}
+</style>
+<head> <title> Audokonfigurator </title> </head>
+<body>
+<div>
+	<h1> Audokonfigurator </h1>
+	<img src="car.png" alt="currentCarPic" class="center">
+</div>
+<div>
+	<form action="UpdateCar" method="post">
+	<table>
+	<tr>
+		<td>Model</td>
+		<td>
+			<input type="radio" name="model" id="r1" value="ferrari"> <label for="r1">Ferrari</label> <br>
+			<input type="radio" name="model" id="r2" value="porsche"> <label for="r2">Porsche</label> <br>
+			<input type="radio" name="model" id="r3" value="mcLaren"> <label for="r3">McLaren</label> <br>
+			<input type="radio" name="model" id="r4" value="Koenigsegg"> <label for="r4">Koenigsegg</label>
+		</td>
+		<td>Wheels</td>
+		<td>
+			<input type="radio" name="wheels" id="r1" value="f52"> <label for="r1">F52</label> <br>
+			<input type="radio" name="wheels" id="r2" value="bbs"> <label for="r2">BBS</label> <br>
+			<input type="radio" name="wheels" id="r3" value="borbet"> <label for="r3">Borbet</label> <br>
+			<input type="radio" name="wheels" id="r4" value="ozracing"> <label for="r4">OZ RACING</label>
+		</td>
+		<td> 
+			<input type="color" name="carColor"> Car Color <br>
+			<input type="color" name="wheelColor"> Wheel Color 
+		</td>
+		<td> 
+			<input type="submit" value="Submit"> 
+			<input type="button" value="Save"> 
+		</td>
+	</tr>
+	</table>
+	</form>
+</div>
+</body>
+</html>
