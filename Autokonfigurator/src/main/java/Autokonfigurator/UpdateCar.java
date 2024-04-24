@@ -21,9 +21,10 @@ public class UpdateCar extends HttpServlet{
 		
 		String carColor = req.getParameter("carColor");
 		String wheelColor = req.getParameter("wheelColor");
+		String model = req.getParameter("model");
 		out.println
 		(
-			"<html>" +
+			"<html>\n" +
 			"<style>\n" +
 			"h1{text-align: center;}\n" + 
 			"body\n" +
@@ -60,8 +61,20 @@ public class UpdateCar extends HttpServlet{
 			"</style>\n" +
 			"<head> <title> Audokonfigurator </title> </head>\n" +
 			"<body>\n" +
-			"<h1> Audokonfigurator </h1>\n" +
-			"<img src=\"car.png\" alt=\"currentCarPic\" class=\"center\">\n" +
+			"<div>\n" +
+			"<h1> Audokonfigurator </h1>\n"
+			);
+			switch(model) {
+			case "koenigsegg":
+				out.println("<img src=\"./img/carKoenig.png\" alt=\"carKoenigPic\" class=\"center\">\n");
+				break;
+			case "lambo":
+				out.println("<img src=\"./img/carLambo.png\" alt=\"carLamboPic\" class=\"center\">\n");
+				break;
+			}
+		out.println(
+			"</div>\n" +
+			"<div>\n" +
 			"<form action=\"UpdateCar\" method=\"post\">\n" +
 			"<table>\n" +
 			"<tr>\n" +
@@ -69,7 +82,7 @@ public class UpdateCar extends HttpServlet{
 			"	<td>\n" +
 			"		<input type=\"radio\" name=\"model\" id=\"r1\" value=\"ferrari\"> <label for=\"r1\">Ferrari</label> <br>\n" +
 			"		<input type=\"radio\" name=\"model\" id=\"r2\" value=\"porsche\"> <label for=\"r2\">Porsche</label> <br>\n" +
-			"		<input type=\"radio\" name=\"model\" id=\"r3\" value=\"mcLaren\"> <label for=\"r3\">McLaren</label> <br>\n" +
+			"		<input type=\"radio\" name=\"model\" id=\"r3\" value=\"lambo\"> <label for=\"r3\">Lamborghini</label> <br>\n" +
  			"		<input type=\"radio\" name=\"model\" id=\"r4\" value=\"Koenigsegg\"> <label for=\"r4\">Koenigsegg</label>\n" +
 			"	</td>\n" +
 			"	<td>Wheels</td>\n" +
@@ -90,8 +103,9 @@ public class UpdateCar extends HttpServlet{
 			"</tr>\n" +
 			"</table>\n" +
 			"</form>\n" +
+			"</div>\n" +
 			"</body>\n" +	
-			"</html>\n"
+			"</html>"
 		);
 		out.close();
 	}
